@@ -1,14 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var skillsCtrl = require('../controllers/skills');
 
-/* GET /skills */
+// all mfs will start with /skills
+
+
 router.get('/', skillsCtrl.index);
-router.get('/:id', skillsCtrl.show);
-
-router.post('/', todosCtrl.create);
-
-
-
-
 
 module.exports = router;
+
+//gang

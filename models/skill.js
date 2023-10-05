@@ -1,23 +1,13 @@
 const skills = [
-    {id: 12345, skill: "Know's Everything", done: true},
-    {id: 12346, skill: "Know's why everyone pronounces Boolean different", done: false},
-    {id: 12347, skill: "Know's Nothing", done: true}
-];
-
-module.exports = {
-    getAll,
-    getOne,
-    create,
-}
-
-
-
-function getOne(id) {
-    id = parseInt(id);
-    return skills.find(skill => skill.id === id);
-}
-
-
-function getAll(){
+    {id: 125223, skill: 'Ability to be handsome', done: true},
+    {id: 127904, skill: 'Ability to be as handsome as ken', done: false},
+    {id: 139608, skill: 'Ability to know why everyone pronounces boolean differently', done: false}
+  ];
+	
+  module.exports = {
+    getAll
+  };
+	
+  function getAll() {
     return skills;
-}
+  }

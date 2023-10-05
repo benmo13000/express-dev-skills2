@@ -1,20 +1,13 @@
-const Skill = require('../models/skill');
+const Skill = require('../models/skill')
 
+// controllers/todos.js
 module.exports = {
     index,
-    show,
-}
 
-function show(req, res) {
-    res.render('skills/show', {
-        skill: Skill.getOne(reqparams.id),
-        title: 'My Skills'
-    });
-}
+};
 
-function index(req, res){
+function index(req, res) {
     res.render('skills/index', {
-        skills: Skill.getAll(),
-        title: 'All Skills'
+      skills: Skill.getAll()
     });
-}
+  }
