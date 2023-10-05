@@ -8,3 +8,5 @@ var skillsCtrl = require('../controllers/skills');
 router.get('/', skillsCtrl.index);
 
 module.exports = router;
+
+//gang
