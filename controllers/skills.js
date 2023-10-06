@@ -1,6 +1,6 @@
 const Skill = require('../models/skill')
 
-// controllers/todos.js
+// controllers/skills.js
 module.exports = {
     index,
     show,

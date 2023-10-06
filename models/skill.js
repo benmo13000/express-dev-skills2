@@ -13,7 +13,7 @@ const skills = [
     id = parseInt(id);
     // The Array.prototype.find iterator method is
     // ideal for finding objects within an array
-    return todos.find(todo => todo.id === id);
+    return skills.find(skill => skill.id === id);
   }
 
   
