@@ -7,7 +7,13 @@ var skillsCtrl = require('../controllers/skills');
 
 router.get('/', skillsCtrl.index);
 
-router.get('/:id', skillsCtrl.show);
-module.exports = router;
+router.get('/new', skillsCtrl.new);
 
-//gang
+router.get('/:id', skillsCtrl.show);
+
+
+
+
+
+
+module.exports = router;
