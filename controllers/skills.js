@@ -5,7 +5,13 @@ module.exports = {
     index,
     show,
     new: newSkill,
+    create,
 };
+
+function create(req, res) {
+  console.log(req.body);
+  res.redirect('/skills');
+}
 
 function newSkill(req, res) {
   res.render('skills/new', {title: 'New Skill'});
