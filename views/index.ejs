@@ -1,12 +1,11 @@
-<body>
-  <h1>Skills</h1>
-  <ul>
-    <% skills.forEach(function(t) { %>
-      <li>
-        <%= t.skill %>
-          - 
-        <%= t.done ? 'done' : 'not done' %>
-      </li>
-    <% }); %>
-  </ul>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/skills">Skill List</a>
+  </body>
+</html>
