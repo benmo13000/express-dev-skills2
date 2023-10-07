@@ -9,7 +9,13 @@ const skills = [
     getOne,
     create,
     deleteOne,
+    update,
   };
+
+  function update(id, updateSkill) {
+    id = parseInt(id);
+    const skill = skills.find(skill => skill.id === id);
+  }
 
   function deleteOne(id) {
     id = parseInt(id);
