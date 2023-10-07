@@ -1,6 +1,5 @@
 const Skill = require('../models/skill')
 
-// controllers/skills.js
 module.exports = {
     index,
     show,
@@ -17,9 +16,10 @@ function update(req, res) {
 }
 
 function edit(req, res) {
-  const Skill = Skill.getOne(req.params.id);
+  const skill = Skill.getOne(req.params.id);
   res.render('skills/edit', {
     title: "Pwease edit dis",
+    skill
   });
 }
 
@@ -30,6 +30,14 @@ function deleteSkill(req, res) {
 
 function create(req, res) {
   console.log(req.body);
+  if (req.body.done){
+    req.body.done = true
+  }else{
+    req.body.done = false
+  }
+
+  Skill.create(req.body);
+
   res.redirect('/skills');
 }
 
@@ -37,13 +45,16 @@ function newSkill(req, res) {
   res.render('skills/new', {title: 'New Skill'});
 }
 
+function show(req, res) {
+  res.render('skills/show', {
+    skill: Skill.getOne(req.params.id),
+    title: 'Skills Details'
+  });
+}
+
 function index(req, res) {
     res.render('skills/index', {
       skills: Skill.getAll(),
-    });
-  }
-  function show(req, res) {
-    res.render('skills/show', {
-      skill: Skill.getOne(req.params.id),
+      title: 'All Details'
     });
   }
